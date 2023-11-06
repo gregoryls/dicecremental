@@ -9,11 +9,18 @@ function getRandomIntFromRange(min, max) {
   return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
+function displayPoints() {
+  const display = document.getElementById("pointDisplay");
+  //   const currentPoints = Number(display.textContent);
+  //   const newPoints = currentPoints + pointAddition;
+  display.textContent = points;
+}
+
 rollButton.addEventListener("click", () => {
   const roll = getRandomIntFromRange(
     dicePool[0],
     dicePool[dicePool.length - 1],
   );
   points += roll;
-  console.log(points);
+  displayPoints();
 });
