@@ -16,11 +16,15 @@ function displayPoints() {
   display.textContent = points;
 }
 
-rollButton.addEventListener("click", () => {
+function rollDie() {
   const roll = getRandomIntFromRange(
     dicePool[0],
     dicePool[dicePool.length - 1],
   );
   points += roll;
+}
+
+rollButton.addEventListener("click", () => {
+  rollDie();
   displayPoints();
 });
