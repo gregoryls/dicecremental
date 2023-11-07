@@ -4,6 +4,7 @@ let points = 0;
 const dicePool = [1, 2, 3, 4, 5, 6];
 
 const rollButton = document.getElementById("rollButton");
+const tier1 = document.getElementById("generatorTier1");
 
 function getRandomIntFromRange(min, max) {
   return Math.floor(Math.random() * (max - min + 1)) + min;
@@ -27,4 +28,11 @@ function rollDie() {
 rollButton.addEventListener("click", () => {
   rollDie();
   displayPoints();
+});
+
+tier1.addEventListener("click", () => {
+  setInterval(() => {
+    rollDie();
+    displayPoints();
+  }, 1000);
 });
