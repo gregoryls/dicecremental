@@ -31,6 +31,11 @@ rollButton.addEventListener("click", () => {
 });
 
 tier1.addEventListener("click", () => {
+  if (points <= 100) return;
+
+  points -= 100;
+  displayPoints();
+
   setInterval(() => {
     rollDie();
     displayPoints();
