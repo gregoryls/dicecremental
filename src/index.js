@@ -22,7 +22,8 @@ function rollDie() {
     dicePool[0],
     dicePool[dicePool.length - 1],
   );
-  points += roll;
+  // points += roll;
+  if (roll > 3) points += 1;
 }
 
 rollButton.addEventListener("click", () => {
