@@ -1,4 +1,4 @@
-//
+import "./style.css";
 
 let points = 0;
 const dicePool = [1, 2, 3, 4, 5, 6];
