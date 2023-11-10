@@ -1,5 +1,8 @@
 import "./style.css";
 
+// TODO
+// show value of each roll to the side of points
+
 let points = 0;
 const dicePool = [1, 2, 3, 4, 5, 6];
 
@@ -10,6 +13,11 @@ function getRandomIntFromRange(min, max) {
   return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
+function removeLowestRoll() {
+  dicePool.shift();
+}
+removeLowestRoll();
+console.log(dicePool);
 function displayPoints() {
   const display = document.getElementById("pointDisplay");
   //   const currentPoints = Number(display.textContent);
